@@ -121,4 +121,48 @@ Computers ={
 
 #sunday 11.59 pm
 
+#Q1
+numb = int(input("Enter a number : "))
+count = 0
+if numb != 0:
+    while numb != 0:
+        numb = int(numb/10)
+        count += 1
+else:
+    count += 1
+print("The number of digits is : ", count)
+
+#Q2
+n = input("Enter a number : ")
+if n.isalpha():
+    print("Please enter a number!")
+elif n.isnumeric():
+    z = int(n)+1
+    fact = 1
+    for i in range(1,z):
+        fact = int(fact*i)
+    print("The factorial of ",n," is : ",fact)
+else:
+    print("Enter a valid number!")
+    
+#Q3
+Computers = {
+    "Laptop1" :{
+        "brand" : "Dell", "OS" : "Windows"
+    },
+    "Laptop2" : {
+        "brand" : "HP", "OS" : "Linux"
+    },
+    "Laptop3" : {
+        "brand" : "Apple", "OS" : "Mac-OS"
+    }
+}
+brand = []
+os = []
+for i in Computers:
+    brand.append(Computers[i]["brand"])
+    os.append(Computers[i]["OS"])
+print(brand)
+print(os)
+
 
